@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Trang giới thiệu thông tin cá nhân và các sản phẩm Lab 05 của Kim Hải Đăng.">
+	<title>Kim Hải Đăng | Sản phẩm Lab 05</title>
+	<style>
+		:root {
+			color-scheme: light;
+			--ink: #172d35;
+			--muted: #587078;
+			--paper: #f5f5ef;
+			--teal: #087e78;
+			--coral: #ed795d;
+			--yellow: #f4c95d;
+			--line: #d7e1dc;
+		}
+
+		* { box-sizing: border-box; }
+
+		body {
+			margin: 0;
+			background-color: var(--paper);
+			background-image: radial-gradient(#dce5de 0.8px, transparent 0.8px);
+			background-size: 18px 18px;
+			color: var(--ink);
+			font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+			line-height: 1.5;
+		}
+
+		.page-shell {
+			width: min(1080px, calc(100% - 40px));
+			margin: 0 auto;
+			padding: 38px 0 56px;
+		}
+
+		.eyebrow {
+			margin: 0 0 10px;
+			color: var(--teal);
+			font-size: 0.78rem;
+			font-weight: 800;
+			letter-spacing: 0.13em;
+			text-transform: uppercase;
+		}
+
+		.intro {
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) auto;
+			align-items: end;
+			gap: 32px;
+			margin-bottom: 38px;
+			padding: 30px 0 32px;
+			border-bottom: 1px solid var(--line);
+		}
+
+		h1, h2, p { margin-top: 0; }
+
+		h1 {
+			max-width: 640px;
+			margin-bottom: 0;
+			font-family: Georgia, "Times New Roman", serif;
+			font-size: clamp(2.5rem, 5vw, 4.4rem);
+			font-weight: 500;
+			line-height: 1;
+			letter-spacing: 0;
+		}
+
+		.profile-details {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(105px, auto));
+			gap: 18px;
+			margin: 24px 0 0;
+		}
+
+		.profile-details div { border-left: 2px solid var(--coral); padding-left: 10px; }
+		.profile-details dt { color: var(--muted); font-size: 0.73rem; font-weight: 700; text-transform: uppercase; }
+		.profile-details dd { margin: 2px 0 0; font-size: 0.96rem; font-weight: 700; }
+
+		.intro-note {
+			max-width: 235px;
+			margin-bottom: 4px;
+			color: var(--muted);
+			font-size: 0.95rem;
+		}
+
+		.section-heading {
+			display: flex;
+			align-items: end;
+			justify-content: space-between;
+			gap: 20px;
+			margin-bottom: 15px;
+		}
+
+		.section-heading h2 { margin-bottom: 0; font-size: 1.4rem; }
+		.section-heading p { margin-bottom: 2px; color: var(--muted); font-size: 0.84rem; }
+		.pdf-panel { margin-bottom: 18px; }
+		.product-panel { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+		.product-heading { padding: 15px 18px; border-bottom: 1px solid var(--line); }
+		.product-heading h3 { margin: 0; font-size: 1rem; }
+		.product-heading p { margin: 3px 0 0; color: var(--muted); font-size: 0.82rem; }
+		.pdf-frame { display: block; width: 100%; height: 650px; border: 0; background: #e9eeeb; }
+		.media-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+		.image-frame { display: block; width: 100%; height: auto; background: #e6f1eb; }
+		.video-frame { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; background: #142a31; }
+		.video-panel { min-width: 0; }
+
+		footer {
+			margin-top: 30px;
+			padding-top: 14px;
+			border-top: 1px solid var(--line);
+			color: var(--muted);
+			font-size: 0.82rem;
+			text-align: center;
+		}
+
+		@media (max-width: 740px) {
+			.page-shell { width: min(100% - 28px, 560px); padding-top: 28px; }
+			.intro { grid-template-columns: 1fr; gap: 12px; }
+			.profile-details { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+			.profile-details dd { font-size: 0.85rem; }
+			.intro-note { max-width: 440px; }
+			.media-grid { grid-template-columns: 1fr; }
+			.pdf-frame { height: 70vh; min-height: 480px; }
+			.section-heading { align-items: start; flex-direction: column; gap: 4px; }
+		}
+
+		@media (prefers-reduced-motion: no-preference) {
+			.product-panel { animation: arrive 500ms ease-out both; }
+			.media-grid .product-panel:nth-child(2) { animation-delay: 100ms; }
+			@keyframes arrive {
+				from { opacity: 0; transform: translateY(10px); }
+				to { opacity: 1; transform: translateY(0); }
+			}
+		}
+	</style>
+</head>
+<body>
+	<main class="page-shell">
+		<header class="intro">
+			<div>
+				<p class="eyebrow">Hồ sơ sinh viên · Lab 05</p>
+				<h1>Kim Hải Đăng</h1>
+				<dl class="profile-details">
+					<div><dt>MSSV</dt><dd>B2605265</dd></div>
+					<div><dt>Lớp</dt><dd>DI26D1A1</dd></div>
+					<div><dt>Môn học</dt><dd>Lab 05</dd></div>
+				</dl>
+			</div>
+			<p class="intro-note">Trang giới thiệu thông tin cá nhân và các sản phẩm thực hành trong Lab 05.</p>
+		</header>
+
+		<section aria-labelledby="products-title">
+			<div class="section-heading">
+				<h2 id="products-title">Sản phẩm thực hành</h2>
+				<p>Ba sản phẩm của Lab 05</p>
+			</div>
+
+			<article class="product-panel pdf-panel" aria-labelledby="pdf-title">
+				<div class="product-heading">
+					<h3 id="pdf-title">Bài thực hành 1.2 · Tài liệu PDF</h3>
+					<p>Lab05_Ex1.2.pdf</p>
+				</div>
+				<iframe class="pdf-frame" src="Lab05_Ex1.2.pdf" title="Tài liệu PDF Lab05 Ex1.2" loading="lazy"></iframe>
+			</article>
+
+			<div class="media-grid">
+				<article class="product-panel" aria-labelledby="image-title">
+					<div class="product-heading">
+						<h3 id="image-title">Bài thực hành 2.1 · Infographic</h3>
+						<p>Lab05_Ex2.1.png</p>
+					</div>
+					<img class="image-frame" src="Lab05_Ex2.1.png" alt="Infographic bài thực hành Lab 05, Ex 2.1" loading="lazy">
+				</article>
+
+				<article class="product-panel video-panel" aria-labelledby="video-title">
+					<div class="product-heading">
+						<h3 id="video-title">Video YouTube</h3>
+						<p>Video Lab 05</p>
+				</div>
+				<iframe
+					class="video-frame"
+					src="https://www.youtube-nocookie.com/embed/ii7XG9HVafQ"
+					title="Video Lab 5 trên YouTube"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen
+					loading="lazy">
+				</iframe>
+				</article>
+			</div>
+		</section>
+
+		<footer>Kim Hải Đăng · B2605265 · DI26D1A1</footer>
+	</main>
+</body>
+</html>
